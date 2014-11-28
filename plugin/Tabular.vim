@@ -261,6 +261,8 @@ endfunction
 " Align text, either using the given pattern, or the command associated with
 " the given name.
 com! -nargs=* -range -complete=customlist,<SID>CompleteTabularizeCommand
+   \ Tab <line1>,<line2>call Tabularize(<q-args>)
+com! -nargs=* -range -complete=customlist,<SID>CompleteTabularizeCommand
    \ Tabularize <line1>,<line2>call Tabularize(<q-args>)
 
 function! Tabularize(command, ...) range
